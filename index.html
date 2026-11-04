@@ -21,10 +21,12 @@
         <button type="button" onclick="document.getElementById('hireDialog').showModal()">Hire me</button>
 
         <dialog id="hireDialog">
-            <h2>Available for intenships</h2>
+            <h2>Available for internships</h2>
             <p>I am available for internships and freelance web projects from june 2027.</p>
-            <p><a href="#contact">Send me a message</a> or <a href="files/cv (2).pdf" download>download my cv</a>.</p>
-            <button type="button" onlick="document.getElementById('hireDialog').close">Close</button>
+            <p><a href="#contact">Send me a message</a> or 
+                <a href="files/cv (2).pdf" download>download my
+                <abbr title="Curriculum Vitae">CV</abbr></a>.</p>
+            <button type="button" onclick="document.getElementById('hireDialog').close()">Close</button>
         </dialog>
 
         <nav>
@@ -39,11 +41,12 @@
     <main>
         <section id="about">
             <h2>About me</h2>
-            <p>I am a 3<sup>rd</sup> year <strong>Software Engineering</strong> student. I <em>really</em> enjoy building
+            <p>I am a 3<sup>rd</sup> year <strong>Software Engineering</strong> student at <abbr title="Addis Ababa Science and Technology University">AASTU</abbr>. I <em>really</em> enjoy building
                 websites, and my current goal is to <mark>become a full-stack web developer</mark>.</p>
             <p>Languages I have used: <b>phyton</b>, <b>c++</b> and <i>a little</i> JavaScript.</p>
             <p>Fun fact: I drink 2 liters of H<sub>2</sub>O while coding every day.</p>
-
+            <P>My favourite is &lt;main&gt;, because it tells the browser where the important content is &amp; helps screen readers.</P>
+            
             <h3>Hear my introduction</h3>
             <audio controls>
                 <source src="media/intro.mp3" type="audio/mpeg">
@@ -80,7 +83,7 @@
                 </li>
                 <li> Web Development
                     <ul type="circle">
-                        <li>HTML</li>
+                        <li><abbr title="HyperText Markup Language">HTML</abbr></li>
                         <li>CSS (learning)</li>
                         <li>JavaScript (next)</li>
                     </ul>
@@ -101,7 +104,7 @@
             </p>
             <p>
                 <label for="lvl-phyton">python</label>
-                <meter id="lvl-html" value="0.7" min="0" max="1">70%</meter>
+                <meter id="lvl-phyton" value="0.7" min="0" max="1">70%</meter>
             </p>
             <p>
                 <label for="lvl-js">Javascript</label>
@@ -176,7 +179,8 @@
         <section id="education">
             <h2>Education</h2>
             <h3>BSc in Software Engineering</h3>
-            <p>Addis Ababa Science and Technology University, 2017-present</p>
+            <p>Addis Ababa Science and Technology University, 
+                <time datetime="2024-09">September 2024</time> - present</p>
             <p>
                 <label for="degree">Degree Progress:</label>
                 <progress id="degree" value="40" max="100">40%</progress>40%
@@ -245,7 +249,7 @@
             <h2>Contact</h2>
             <p>Address:<br>Addis Ababa,<br>Ethiopia</p>
             <p>Email: <a href="mailto:abtd.0809@gmail.com">abigiya.tegene@gmail.com</a></p>
-            <p>Phone: <a href="tel:+251906433726">+251906433726</a></p>
+            <p>Phone: <a href="tel:+251906433726">+251&nbsp;906&nbsp;433&nbsp;726</a></p>
             <p>Github: <a href="https://github.com/Elisheba-101">github.com/abigiyategene</a></p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/abigiyategene">linkedin.com/in/abigiyategene</a> </p>
             <p><a href="files/cv (2).pdf" download>Download my cv (PDF)</a></p>
@@ -339,6 +343,7 @@
 
     <footer>
         <p>&copy; 2026 Abigiya Tegene. All rights reserved.</p>
+        <p>Last updated: <time datetime="2026-11-04">4 November 2026</time></p>
     </footer>
 </body>
 
