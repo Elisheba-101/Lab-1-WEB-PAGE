@@ -14,6 +14,7 @@
 
 <body>
     <header>
+        <canvas id="logo" width="120" height="120">Abigiya Tegene logo</canvas>
         <h1>Abigiya Tegene</h1>
         <img src="images/profile.jpg" alt="Portrait of Abigiya Tegene" title="Abigiya Tegene" width="200" height="200">
         <p>Software Engineering student and aspiring web developer.</p>
@@ -43,14 +44,14 @@
             <h2>About me</h2>
             <p>I am a 3<sup>rd</sup> year <strong>Software Engineering</strong> student at <abbr title="Addis Ababa Science and Technology University">AASTU</abbr>. I <em>really</em> enjoy building
                 websites, and my current goal is to <mark>become a full-stack web developer</mark>.</p>
-            <p>Languages I have used: <b>phyton</b>, <b>c++</b> and <i>a little</i> JavaScript.</p>
+            <p>Languages I have used: <b>pyhton</b>, <b>c++</b> and <i>a little</i> JavaScript.</p>
             <p>Fun fact: I drink 2 liters of H<sub>2</sub>O while coding every day.</p>
             <P>My favourite is &lt;main&gt;, because it tells the browser where the important content is &amp; helps screen readers.</P>
             
             <h3>Hear my introduction</h3>
             <audio controls>
                 <source src="media/intro.mp3" type="audio/mpeg">
-                Your browser does not suppert this audio element.
+                Your browser does not support this audio element.
             </audio>
         </section>
 
@@ -65,7 +66,7 @@
             <h3>A talk I recommend</h3>
             <iframe src="https://www.youtube.com/embed/shN0HNnvaoM"
                 width="560" height="315"
-                title="YouTube vedio: How I'd Learn Front End Web Development (If I Could Start Over)"
+                title="YouTube video: How I'd Learn Front End Web Development (If I Could Start Over)"
                 allowfullscreen>
             </iframe>
         </aside>
@@ -103,17 +104,19 @@
                 <meter id="lvl-html" value="0.8" min="0" max="1">80%</meter>
             </p>
             <p>
-                <label for="lvl-phyton">python</label>
-                <meter id="lvl-phyton" value="0.7" min="0" max="1">70%</meter>
+                <label for="lvl-pyhton">python</label>
+                <meter id="lvl-pyhton" value="0.7" min="0" max="1">70%</meter>
             </p>
             <p>
-                <label for="lvl-js">Javascript</label>
+                <label for="lvl-js">JavaScript</label>
                 <meter id="lvl-js" value="0.2" min="0" max="1" low="0.3" high="0.7" optimum="1">20%</meter>
             </p>
             <p>
                 <label for="lvl-cpp">c++</label>
                 <meter id="lvl-cpp" value="0.75" min="0" max="1">75%</meter>
             </p>
+
+            <canvas id="skillChart" width="300" height="150">Chart of my skill levels</canvas>
 
             <h3>My Learning Roadmap</h3>
             <ol type="1">
@@ -157,7 +160,7 @@
             </article>
             <article>
                 <h3>My First Program</h3>
-                <p>The first thing I wrote in phyton was <code>print("Hello, World!")</code>. Later I wrote this loop:
+                <p>The first thing I wrote in pyhton was <code>print("Hello, World!")</code>. Later I wrote this loop:
                 </p>
                 <pre><code>
         for i in range(3):
@@ -250,7 +253,7 @@
             <p>Address:<br>Addis Ababa,<br>Ethiopia</p>
             <p>Email: <a href="mailto:abtd.0809@gmail.com">abigiya.tegene@gmail.com</a></p>
             <p>Phone: <a href="tel:+251906433726">+251&nbsp;906&nbsp;433&nbsp;726</a></p>
-            <p>Github: <a href="https://github.com/Elisheba-101">github.com/abigiyategene</a></p>
+            <p>Github: <a href="https://github.com/Elisheba-101">github.com/Elisheba-101</a></p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/abigiyategene">linkedin.com/in/abigiyategene</a> </p>
             <p><a href="files/cv (2).pdf" download>Download my cv (PDF)</a></p>
 
@@ -345,6 +348,39 @@
         <p>&copy; 2026 Abigiya Tegene. All rights reserved.</p>
         <p>Last updated: <time datetime="2026-11-04">4 November 2026</time></p>
     </footer>
+
+    <script>
+        const canvas = document.getElementById('logo');
+        const ctx = canvas.getContext('2d');
+
+        ctx.fillStyle = "#bb4488";
+        ctx.fillRect(0, 0, 120, 120);
+
+       
+        ctx.fillStyle = "white";
+        ctx.font = "bold 44px Arial";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText("AT", 60, 62);
+
+        const chart = document.getElementById('skillChart');
+        const chartCtx = chart.getContext('2d');
+
+        chartCtx.fillStyle = "#bb4488";
+        chartCtx.fillRect(20, 34, 50, 96);
+        chartCtx.fillRect(90, 46, 50, 84);
+        chartCtx.fillRect(160, 106, 50, 24);
+        chartCtx.fillRect(230, 40, 50, 90);
+
+        chartCtx.fillStyle = "#333333";
+        chartCtx.font = "12px Arial";
+        chartCtx.textAlign = "center";
+        chartCtx.fillText("HTML", 45, 145);
+        chartCtx.fillText("Python", 115, 145);
+        chartCtx.fillText("JavaScript", 185, 145);
+        chartCtx.fillText("C++", 255, 145);
+    </script>
+
 </body>
 
 </html>
