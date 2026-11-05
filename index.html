@@ -42,9 +42,9 @@
     <main>
         <section id="about">
             <h2>About me</h2>
-            <p>I am a 3<sup>rd</sup> year <strong>Software Engineering</strong> student at <abbr title="Addis Ababa Science and Technology University">AASTU</abbr>. I <em>really</em> enjoy building
+            <p>I am a 3<sup>rd</sup> year <strong>Software Engineering</strong> student at Addis Ababa Science and Technology university. I <em>really</em> enjoy building
                 websites, and my current goal is to <mark>become a full-stack web developer</mark>.</p>
-            <p>Languages I have used: <b>pyhton</b>, <b>c++</b> and <i>a little</i> JavaScript.</p>
+            <p>Languages I have used: <b>pyhton</b>, <b>c++</b> and <i>a little</i> JavaScript. I am now learning <abbr title="Hyper Text Markup Language">HTML</abbr></p>
             <p>Fun fact: I drink 2 liters of H<sub>2</sub>O while coding every day.</p>
             <P>My favourite is &lt;main&gt;, because it tells the browser where the important content is &amp; helps screen readers.</P>
             
@@ -182,11 +182,11 @@
         <section id="education">
             <h2>Education</h2>
             <h3>BSc in Software Engineering</h3>
-            <p>Addis Ababa Science and Technology University, 
+            <p>Addis Ababa Science and Technology University <abbr title="Addis Ababa Science and Technology University"> (AASTU)</abbr>, 
                 <time datetime="2024-09">September 2024</time> - present</p>
             <p>
                 <label for="degree">Degree Progress:</label>
-                <progress id="degree" value="40" max="100">40%</progress>40%
+                <progress id="degree" value="40" max="100" style="accent-color: #bb4488;">40%</progress>40%
             </p>
 
             
@@ -271,6 +271,7 @@
                   width="600" height="300"
                   title="Map of my university campus">
             </iframe>
+        </section>
 
             <h3>Send me a message</h3>
             <form action="thank-you.html" method="post" enctype="multipart/form-data">
@@ -290,9 +291,11 @@
                     <input type="text" id="phone" name="phone" pattern="0[79][0-9]{8}" title="10 digits starting with 09 or 07">
                     <br><br>
                     <p>Preferred contact method:</p>
-                    <input type="radio" id="by-email" name="contact-method" value="email" checked>
+                    <input type="radio" id="by-email" name="contact-method" value="email" checked
+                    style="accent-color: #bb4488;">
                     <label for="by-email">Email</label>
-                    <input type="radio" id="by-phone" name="contact-method" value="phone">
+                    <input type="radio" id="by-phone" name="contact-method" value="phone"
+                    style="accent-color: #bb4488;">
                     <label for="by-phone">Phone</label>
                     <br><br>
                     <label for="meeting">Preferred meeting date:</label>
@@ -301,17 +304,19 @@
                     <label for="weeks">Project length (weeks):</label>
                     <input type="number" id="weeks" name="weeks" min="1" max="52" step="1"> 
                     <br><br>
+                    <label for="budget">Your budget (ETB):</label>
+                    <input type="number" id="budget" name="budget" min="1000" step="500">
+                    <br><br>
                     <label for="brief">Attach a project brief:</label>
                     <input type="file" id="brief" name="brief">
                     <br><br>
                     <label for="colour">Preferred website colour:</label>
-                    <input type="color" id="colour" name="colour" value="#1f5fa8">
+                    <input type="color" id="colour" name="colour" value="#A81F61">
                     <br><br>
                     <label for="rating">How  much do you like my portfolio? (1-10)</label>
-                    <input type="range" id="rating" name="rating" min="1" max="10" value="7">
+                    <input type="range" id="rating" name="rating" min="1" max="10" value="7" style="accent-color: #bb4488;">
                     <br><br>
-                    <label for="budget">Your budget (ETB):</label>
-                    <input type="number" id="budget" name="budget" min="1000" step="500">
+                    
                 </fieldset>
 
                 <fieldset>
@@ -341,9 +346,8 @@
                 <button type="submit">Send Message</button>
                 <button type="reset">Clear</button>
             </form>
-        </section>
     </main>
-
+    
     <footer>
         <p>&copy; 2026 Abigiya Tegene. All rights reserved.</p>
         <p>Last updated: <time datetime="2026-11-04">4 November 2026</time></p>
@@ -355,14 +359,20 @@
 
         ctx.fillStyle = "#bb4488";
         ctx.fillRect(0, 0, 120, 120);
-
-       
+        
+        //white circle
+        ctx.beginPath();
+        ctx.arc(60, 60, 45, 0, 2 * Math.PI);
         ctx.fillStyle = "white";
+        ctx.fill();
+
+        ctx.fillStyle = "#bb4488";
         ctx.font = "bold 44px Arial";
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
         ctx.fillText("AT", 60, 62);
-
+        
+        //bar chart
         const chart = document.getElementById('skillChart');
         const chartCtx = chart.getContext('2d');
 
